@@ -1,0 +1,4 @@
+#!/bin/bash
+
+systemctl enable NetworkManager sddm
+systemctl mask NetworkManager-wait-online
