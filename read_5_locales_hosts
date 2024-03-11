@@ -26,7 +26,7 @@ sudo touch /etc/hostname
 sudo echo "assaytean" >> /etc/hostname
 # sudo echo "" >> /etc/hostname
 
-sudo touch /etc/hosts
+# sudo touch /etc/hosts
 
 sudo echo "127.0.0.1 localhost" >> /etc/hosts
 sudo echo "::1 localhost" >> /etc/hosts
