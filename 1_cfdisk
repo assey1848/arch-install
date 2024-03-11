@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if
+ping archlinux.org
+then   
+timedatectl set-ntp true
+echo "It works!"
+fi
+
+lsblk
+
+disk=sda
+
+wipefs --all /dev/$disk
+
+cfdisk /dev/$disk

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+pacstrap /mnt base base-devel linux-zen linux-zen-headers nano networkmanager btrfs-progs plasma sddm realtime-privileges amd-ucode linux-firmware mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau konsole dolphin

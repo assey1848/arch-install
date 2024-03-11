@@ -1,0 +1,7 @@
+#!/bin/bash
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+btrfs filesystem label /mnt "ArchLinux"
+blkid
+
