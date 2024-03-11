@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mount /dev/$diskp2 /mnt
+mount /dev/$disk"p2" /mnt
 cd /mnt
 
 btrfs subvolume create ./@
@@ -9,9 +9,9 @@ btrfs subvolume create ./@home
 cd
 umount /mnt -R
 
-mount -o rw,noatime,compress=zstd:3,ssd,ssd_spread,discard=async,space_cache=v2,subvol=/@ /dev/$diskp2 /mnt
-mount -o rw,noatime,compress=zstd:3,ssd,ssd_spread,discard=async,space_cache=v2,subvol=/@home /dev/$diskp2 /m>
+mount -o rw,noatime,compress=zstd:3,ssd,ssd_spread,discard=async,space_cache=v2,subvol=/@ /dev/$disk"p2" /mnt
+mount -o rw,noatime,compress=zstd:3,ssd,ssd_spread,discard=async,space_cache=v2,subvol=/@home /dev/$disk"p2" /m>
 mount | grep /mnt
 
 mkdir /mnt/boot
-mount /dev/$diskp1 /mnt/boot
+mount /dev/$disk"p1" /mnt/boot
