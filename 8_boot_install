@@ -1,0 +1,15 @@
+#!/bin/bash
+
+bootctl install
+# sudo nano /boot/loader/loader.conf
+sudo echo "default linux-zen.conf" > /boot/loader/loader.conf
+sudo echo "timeout 0" >> /boot/loader/loader.conf
+sudo echo "console-mode auto" >> /boot/loader/loader.conf
+sudo echo "editor no" >> /boot/loader/loader.conf
+
+sudo touch /boot/loader/entries/linux-zen.conf
+sudo echo "tittle linux-zen" > /boot/loader/entries/linux-zen.conf
+sudo echo "linux /vmlinuz-linux-zen" >> /boot/loader/entries/linux-zen.conf
+sudo echo "initrd /amd-ucode.img" >> /boot/loader/entries/linux-zen.conf
+sudo echo "initrd /initramfs-linux-zen.img" >> /boot/loader/entries/linux-zen.conf
+sudo echo "options root=\"LABEL=ArchLinux\" rw rootflags=subvol=@ nowatchdog loglevel=6 rootfstype=btrfs" >> /boot/loader/entries/linux-zen.conf
